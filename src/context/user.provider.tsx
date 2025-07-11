@@ -9,7 +9,7 @@ import {
   useState,
 } from "react";
 import { IUser } from "../types";
-import { getCurrentUser } from "@/services/AuthService";
+// import { getCurrentUser } from "@/services/AuthService";
 
 interface IUserProviderValues {
   user: IUser | null;
@@ -26,7 +26,7 @@ const UserProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const currentUser = await getCurrentUser();
+      const currentUser = await null;
       setUser(currentUser);
       setIsLoading(false);
     };
