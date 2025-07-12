@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { poppins } from "@/config/fonts";
 import { clsx } from "clsx";
 import { Providers } from "@/lib/providers";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/logo.png",
+    icon: "/favicon.png",
   },
 };
 
@@ -29,8 +29,8 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          "min-h-screen bg-[#F0F0F0] font-sans antialiased",
+          poppins.variable
         )}>
         <Providers>{children}</Providers>
       </body>

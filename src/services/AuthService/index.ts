@@ -1,15 +1,17 @@
-"use client";
+// "use client";
 
-import { AuthError, User } from "@supabase/supabase-js";
+// import { IUser } from "@/types";
+// import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+// import { AuthError, User } from "@supabase/supabase-js";
 
 // Initialize Supabase client for client-side usage
 // createClientComponentClient();
 // const supabase = "";
 
-export interface IAuthResponse {
-  user: User | null;
-  error: AuthError | null;
-}
+// export interface IAuthResponse {
+//   user: User | null;
+//   error: AuthError | null;
+// }
 
 // ====================
 // Register new user
