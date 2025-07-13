@@ -1,13 +1,17 @@
 // import Footer from "@/src/components/UI/Footer";
-// import { Navbar } from "@/src/components/UI/navbar/navbar";
+import { Footer } from "@/components/ui/footer/footer";
+import Header from "@/components/ui/Header";
+import Navbar from "@/components/ui/navbar/Navbar";
 import React from "react";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="relative flex flex-col h-screen">
-      {/* <Navbar /> */}
-      <main>{children}</main> {/* Make sure this is a single child */}
-      {/* <Footer /> */}
+      <Header />
+      <Navbar />
+      <main>{children}</main>{" "}
+      {/* Make sure this is a single child */}
+      <Footer />
     </div>
   );
 };
