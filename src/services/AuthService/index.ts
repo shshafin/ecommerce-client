@@ -1,5 +1,9 @@
 // "use client";
+// "use client";
 
+// import { IUser } from "@/types";
+// import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+// import { AuthError, User } from "@supabase/supabase-js";
 // import { IUser } from "@/types";
 // import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 // import { AuthError, User } from "@supabase/supabase-js";
@@ -34,6 +38,8 @@
 
 //   return { user: data.user, error };
 // };
+//   return { user: data.user, error };
+// };
 
 // ====================
 // Login existing user
@@ -48,6 +54,8 @@
 //     password,
 //   });
 
+//   return { user: data.user, error };
+// };
 //   return { user: data.user, error };
 // };
 
@@ -68,7 +76,14 @@
 //   const { data, error } = await supabase.auth.getUser();
 
 //   if (error || !data.user) return null;
+//   if (error || !data.user) return null;
 
+//   return {
+//     id: data.user.id,
+//     email: data.user.email || "",
+//     name: data.user.user_metadata?.name || "",
+//   };
+// };
 //   return {
 //     id: data.user.id,
 //     email: data.user.email || "",
@@ -86,5 +101,7 @@
 //     password: newPassword,
 //   });
 
+//   return { error };
+// };
 //   return { error };
 // };

@@ -98,16 +98,16 @@ const products = [
   },
 ];
 
-export default function NewArrivals() {
+export default function CommingSoon() {
   return (
     <div className="py-8">
       <div className="container mx-auto px-4">
-        <div className="flex items-center mb-6 border-b border-[#00C896] pb-4">
-          <Button className="bg-[#00C896] hover:bg-[#00B285] text-white pl-4 pr-0 py-2 text-sm flex items-center gap-2 rounded-none border border-[#00C896]">
-            <span className="pr-2 text-xl">New Arrivals</span>
+        <div className="flex items-center mb-6 border-b border-[#7770d8] pb-4">
+          <Button className="bg-[#7770d8] hover:bg-[#111009] text-white pl-4 pr-0 py-2 text-sm flex items-center gap-2 rounded-none border border-[#7770d8]">
+            <span className="pr-2 text-xl">Comming Soon</span>
             <div className="w-8 h-8 flex items-center justify-center border border-white bg-white">
               <Image
-                src="/new-arrivals.svg"
+                src="/comming-soon.svg"
                 alt="New Icon"
                 width={20}
                 height={20}
