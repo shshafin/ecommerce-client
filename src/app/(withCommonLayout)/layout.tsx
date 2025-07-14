@@ -1,4 +1,3 @@
-// import Footer from "@/src/components/UI/Footer";
 import { Footer } from "@/components/ui/footer/footer";
 import Header from "@/components/ui/Header";
 import Navbar from "@/components/ui/navbar/Navbar";
@@ -9,8 +8,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
     <div className="relative flex flex-col h-screen">
       <Header />
       <Navbar />
-      <main>{children}</main>{" "}
-      {/* Make sure this is a single child */}
+      <main>{children}</main> {/* Make sure this is a single child */}
       <Footer />
     </div>
   );
