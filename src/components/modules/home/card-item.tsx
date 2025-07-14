@@ -17,7 +17,7 @@ interface Iitem {
 function CardItem({ productData }: { productData: Iitem }) {
   return (
     <div className="bg-white rounded-lg shadow-sm overflow-hidden group">
-      <div className="relative">
+      <div className="relative p-3">
         <Image
           src={productData.image || "/placeholder.svg"}
           alt={productData.name}
@@ -25,17 +25,16 @@ function CardItem({ productData }: { productData: Iitem }) {
           height={300}
           className="w-full h-64 object-cover"
         />
-        <Badge className="absolute top-2 left-2 rounded-sm bg-red-500 text-white">
+        <Badge className="absolute top-5 left-5 rounded-sm bg-red-500 text-white">
           -{productData.discount}%
         </Badge>
-        <div className="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity ">
+        <div className="absolute top-5 right-5 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity ">
           <Button className=" text-rose-600 bg-white rounded-full shadow-lg hover:bg-gray-100">
             <Heart className="h-4 w-4 fill-white" />
           </Button>
           <Button
             size="icon"
-            className=" text-teal-600 bg-white rounded-full shadow-lg hover:bg-gray-100"
-          >
+            className=" text-teal-600 bg-white rounded-full shadow-lg hover:bg-gray-100">
             <Eye className="h-4 w-4" />
           </Button>
         </div>
