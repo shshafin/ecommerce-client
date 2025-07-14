@@ -13,15 +13,13 @@ export default function Home() {
 
       <MainContent />
       <TopCategories />
-      {/* <NewArrivals />
-        <CommingSoon/> */}
       <CategoryProducts name={"New Arrivals"} />
-      <CategoryProducts name={"Comming Soon"} />
+      <CategoryProducts name={"Coming Soon"} />
       <CategoryProducts name={"Best Sellers"} />
       <CategoryProducts name={"Trending Now"} />
       <CategoryProducts name={"Special Offers"} />
       <CategoryProducts name={"Top Rated"} />
-      <NewsletterSubscriber/>
+      <NewsletterSubscriber />
     </main>
   );
 }

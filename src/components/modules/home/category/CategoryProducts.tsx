@@ -108,7 +108,7 @@ export default function CategoryProducts({ name }: { name: string }) {
         icon: "/new-arrivals.svg", // Icon URL
         url: "/shop", // URL
       };
-    } else if (name === "Comming Soon") {
+    } else if (name === "Coming Soon") {
       return {
         bg: "#6A5ACD", // Background color
         hover: "#847edb", // Corrected hover color
@@ -159,15 +159,13 @@ export default function CategoryProducts({ name }: { name: string }) {
         <div
           className={`flex items-center mb-6 border-b border-[${
             getValue().bg
-          }] pb-4`}
-        >
+          }] pb-4`}>
           <Button
-            className={`bg-[${getValue().bg}] hover:bg-[${
-              getValue().hover
-            }] text-white pl-4 pr-0 py-2 text-sm flex items-center gap-2 rounded-none border border-[${
-              getValue().bg
-            }]`}
-          >
+            style={{
+              backgroundColor: getValue().bg,
+              borderColor: getValue().bg,
+            }}
+            className="hover:opacity-90 text-white pl-4 pr-0 py-2 text-sm flex items-center gap-2 rounded-none border">
             <span className="pr-2 text-xl">{name}</span>
             <div className="w-8 h-8 flex items-center justify-center border border-white bg-white">
               <Image
@@ -183,7 +181,10 @@ export default function CategoryProducts({ name }: { name: string }) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.slice(0, 8).map((product) => (
-            <CardItem key={product.id} productData={product} />
+            <CardItem
+              key={product.id}
+              productData={product}
+            />
           ))}
         </div>
       </div>
