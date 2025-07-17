@@ -3,6 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "AlinurBanglaborno";
+  src: url("/fonts/AlinurBanglaborno.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

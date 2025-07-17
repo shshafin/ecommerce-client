@@ -1,27 +1,63 @@
-import { Truck, DollarSign, Headphones, Shield } from "lucide-react";
+import Image from "next/image";
 
 export default function ServiceFeatures() {
   const features = [
     {
-      icon: <Truck className="w-8 h-8 text-teal-600" />,
+      icon: (
+        <Image
+          src="/free-shipping.svg"
+          alt="Free Shipping Icon"
+          width={32}
+          height={32}
+          className="text-teal-600"
+          priority={true}
+        />
+      ),
       title: "FREE SHIPPING & RETURN",
       subtitle: "Free Shipping Over",
       detail: "Order 3500 Tk",
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-teal-600" />,
+      icon: (
+        <Image
+          src="/money.svg"
+          alt="Money Back Icon"
+          width={32}
+          height={32}
+          className="text-teal-600"
+          priority={true}
+        />
+      ),
       title: "MONEY BACK GUARANTEE",
       subtitle: "100% money back",
       detail: "Guarantee",
     },
     {
-      icon: <Headphones className="w-8 h-8 text-teal-600" />,
+      icon: (
+        <Image
+          src="/online.svg"
+          alt="Online Support Icon"
+          width={32}
+          height={32}
+          className="text-teal-600"
+          priority={true}
+        />
+      ),
       title: "ONLINE SUPPORT 24/7",
       subtitle: "If you any problem then ",
       detail: "contact us",
     },
     {
-      icon: <Shield className="w-8 h-8 text-teal-600" />,
+      icon: (
+        <Image
+          src="/secure.svg"
+          alt="Secure Payment Icon"
+          width={32}
+          height={32}
+          className="text-teal-600"
+          priority={true}
+        />
+      ),
       title: "SECURE PAYMENT",
       subtitle: "100% Secure Payment",
       detail: "Process",

@@ -4,25 +4,25 @@ import Image from "next/image";
 export default function TopFeatures() {
   return (
     <div className="border-b border-gray-200">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {[
             {
               icon: "/footer-1.svg",
-              title: "বিনামূল্যে ডেলিভারি",
-              desc: "ঢাকার ভিতরে ৫০০ টাকার উপরে অর্ডারে বিনামূল্যে ডেলিভারি পাবেন এবং ঢাকার বাইরে ১০০০ টাকার উপরে।",
+              title: "দেশব্যাপী ডেলিভারি",
+              desc: "আমরা আমাদের ওয়েবসাইটের পণ্য দ্রুততার সাথে সারা দেশে ডেলিভারি করে থাকি।",
               iconSize: "h-20 w-20",
             },
             {
               icon: "/footer-2.svg",
-              title: "মানসম্মত পণ্যের নিশ্চয়তা",
-              desc: "আমাদের সকল পণ্য আন্তর্জাতিক মানের এবং আমরা গুণগত মান বজায় রাখতে প্রতিশ্রুতিবদ্ধ।",
+              title: "নিরাপদ মূল্যপরিশোধ",
+              desc: "আমাদের পেমেন্ট করুন, দেশের সবচেয়ে জনপ্রিয় ও নিরাপদ পেমেন্ট পদ্ধতিতে।",
               iconSize: "h-14 w-14",
             },
             {
               icon: "/footer-3.svg",
-              title: "কাস্টমার সার্ভিস",
-              desc: "আমাদের গ্রাহক সেবা টিম সর্বদা আপনার সেবায় নিয়োজিত এবং যেকোনো সমস্যার সমাধান দিতে প্রস্তুত।",
+              title: "কাস্টমার সাপোর্ট",
+              desc: "সহজ কেনাকাটার অভিজ্ঞতার জন্য আমাদের আছে, ২৪/৭ ঘন্টা সার্বক্ষণিক কাস্টমার সেবা।",
               iconSize: "h-14 w-14",
             },
           ].map((item, i) => (
@@ -39,10 +39,10 @@ export default function TopFeatures() {
                 className={`object-contain ${item.iconSize}`}
               />
               <div>
-                <h3 className="font-bold text-lg mb-2 text-white">
+                <h3 className="font-bold font-[AlinurBanglaborno] tracking-wider text-lg mb-2 text-white">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm font-bold font-[AlinurBanglaborno] tracking-wider text-gray-100 leading-relaxed">
                   {item.desc}
                 </p>
               </div>

@@ -190,7 +190,7 @@ export default function CategoryProducts({ name }: { name: string }) {
       </div>
 
       <Link href={getValue().url}>
-        <span className="float-right flex items-center text-xl mt-2 p-3">
+        <span className="float-right flex items-center text-gray-600 text-xl mt-2 p-3">
           View More <ChevronRight />
         </span>
       </Link>

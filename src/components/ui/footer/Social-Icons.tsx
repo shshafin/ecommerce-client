@@ -12,18 +12,18 @@ const socialIcons = [
 
 export default function SocialIcons() {
   return (
-    <div className="flex gap-2 flex-wrap">
+    <div className="flex gap-1 flex-wrap">
       {socialIcons.map((icon) => (
         <Link
           key={icon.id}
           href={icon.href}
-          className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors">
+          className="flex items-center justify-center ">
           <Image
             src={`/social-${icon.id}.svg`}
             alt={`social-${icon.id}`}
             width={16}
             height={16}
-            className="object-contain"
+            className="object-contain h-7 w-7"
           />
         </Link>
       ))}
