@@ -1,7 +1,7 @@
 import Link from "next/link";
-import SocialIcons from "./social-icons";
 import TopFeatures from "./TopFeature";
 import Copyright from "./Copyright";
+import SocialIcons from "./Social-Icons";
 
 export function Footer() {
   return (
