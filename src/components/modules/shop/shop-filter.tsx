@@ -1,22 +1,27 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ChevronDown, ChevronUp } from "lucide-react"
-import HeroBanner from "../home/hero-section/HeroBanner"
-import { CustomCheckbox } from "@/components/ui/check-box"
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { CustomCheckbox } from "@/components/ui/check-box";
+import { Slider } from "@/components/ui/slider";
 
-export function ProductFilter() {
-  const [priceRange, setPriceRange] = useState([349, 5549])
-  const [sizesExpanded, setSizesExpanded] = useState(true)
-  const [colorsExpanded, setColorsExpanded] = useState(true)
+export function ShoptFilter() {
+  const [priceRange, setPriceRange] = useState([349, 5549]);
+  const [sizesExpanded, setSizesExpanded] = useState(true);
+  const [colorsExpanded, setColorsExpanded] = useState(true);
+  const [selectedSizes, setSelectedSizes] = useState({
+    "xl-xxl": true,
+    l: false,
+    m: false,
+    s: false,
+  });
 
   const sizes = [
-    { id: "xl-xxl", label: "Extra Large (XL & XXL)", checked: true },
-    { id: "l", label: "Large (L)", checked: false },
-    { id: "m", label: "Medium (M)", checked: false },
-    { id: "s", label: "Small (S)", checked: false },
-  ]
+    { id: "xl-xxl", label: "Extra Large (XL & XXL)" },
+    { id: "l", label: "Large (L)" },
+    { id: "m", label: "Medium (M)" },
+    { id: "s", label: "Small (S)" },
+  ];
 
   const colors = [
     { id: "black", label: "Black", color: "bg-black" },
@@ -26,10 +31,17 @@ export function ProductFilter() {
     { id: "indigo", label: "Indigo", color: "bg-indigo-500" },
     { id: "light-blue", label: "Light-Blue", color: "bg-sky-300" },
     { id: "red", label: "Red", color: "bg-red-500" },
-  ]
+  ];
+
+  const handleSizeChange = (sizeId: string, checked: boolean) => {
+    setSelectedSizes((prev) => ({
+      ...prev,
+      [sizeId]: checked,
+    }));
+  };
 
   return (
-    <div className="w-64 bg-white p-6 border-r border-gray-200 h-screen">
+    <div className="w-70 bg-gray-100 p-4 pl-10 h-full">
       {/* Price Filter */}
       <div className="mb-8">
         <h3 className="font-semibold text-lg mb-6 text-gray-900">Price</h3>
@@ -37,28 +49,33 @@ export function ProductFilter() {
         {/* Colorful Price Slider */}
         <div className="mb-6">
           <div className="relative">
-            {/* Colorful background track */}
-            <div className="h-2 bg-gradient-to-r from-blue-400 via-green-400  to-red-400 rounded-full mb-4"></div>
-
-            {/* Custom range input styling */}
+            <div className="h-2 bg-gradient-to-r from-blue-400 via-green-400 to-red-400 rounded-full mb-4"></div>
             <div className="relative -mt-6">
-            <HeroBanner/>
+              <Slider
+                value={priceRange}
+                onValueChange={setPriceRange}
+                max={6000}
+                min={300}
+                step={50}
+                className="relative z-10"
+              />
             </div>
           </div>
         </div>
 
-        {/* Price Display */}
         <div className="flex items-center justify-between text-sm text-gray-700 mb-4">
           <span className="font-medium">
             Price: ₹{priceRange[0]} - ₹{priceRange[1]}
           </span>
+           <button className="bg-white py-1 px-2 cursor-pointer hover:bg-gray-100 text-black font-medium rounded">
+          Filter
+        </button>
         </div>
 
-        {/* Black and White Filter Button */}
-        <Button className="w-full bg-black hover:bg-gray-800 text-white font-medium py-2 px-4 rounded">Filter</Button>
+       
       </div>
 
-      {/* Sizes Filter */}
+      {/* Sizes Filter with Custom Checkboxes */}
       <div className="mb-8">
         <div
           className="flex items-center justify-between cursor-pointer mb-4"
@@ -75,12 +92,17 @@ export function ProductFilter() {
           <div className="space-y-4">
             {sizes.map((size) => (
               <div key={size.id} className="flex items-center space-x-3">
-                <CustomCheckbox               
+                <CustomCheckbox
                   id={size.id}
-                  defaultChecked={size.checked}
-                  className="data-[state=checked]:bg-blue-500 data-[state=checked]:border-blue-500"
+                  checked={selectedSizes[size.id as keyof typeof selectedSizes]}
+                  onCheckedChange={(checked) =>
+                    handleSizeChange(size.id, checked)
+                  }
                 />
-                <label htmlFor={size.id} className="text-sm text-gray-700 cursor-pointer font-medium">
+                <label
+                  htmlFor={size.id}
+                  className="text-sm text-gray-700 cursor-pointer font-medium hover:text-gray-900 transition-colors"
+                >
                   {size.label}
                 </label>
               </div>
@@ -106,13 +128,17 @@ export function ProductFilter() {
           <div className="space-y-4">
             {colors.map((color) => (
               <div key={color.id} className="flex items-center space-x-3">
-                <div className={`w-5 h-5 rounded-full ${color.color} border-2 border-gray-300 cursor-pointer`}></div>
-                <label className="text-sm text-gray-700 cursor-pointer font-medium">{color.label}</label>
+                <div
+                  className={`w-5 h-5 rounded-full ${color.color} border-2 border-gray-300 cursor-pointer hover:border-gray-400 transition-colors`}
+                ></div>
+                <label className="text-sm text-gray-700 cursor-pointer font-medium hover:text-gray-900 transition-colors">
+                  {color.label}
+                </label>
               </div>
             ))}
           </div>
         )}
       </div>
     </div>
-  )
+  );
 }

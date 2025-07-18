@@ -33,6 +33,8 @@ export default function TopCategories() {
                   width={64}
                   height={64}
                   className="w-full h-full object-cover"
+                  placeholder="empty"
+                  unoptimized
                 />
               </div>
             </div>
