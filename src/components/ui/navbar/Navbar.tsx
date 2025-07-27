@@ -13,7 +13,7 @@ export default function Navbar() {
   const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
 
   return (
-    <div className="w-full bg-gray-200">
+    <div className="w-full sticky top-0 bg-gray-200 z-10 transition-all duration-300">
       <header className="sticky top-0 z-50 w-full border-b bg-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
           <div className="flex h-16 items-center justify-between lg:justify-normal lg:gap-6">

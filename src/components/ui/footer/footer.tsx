@@ -22,43 +22,49 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  href="/faq"
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   FAQs
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Portfolio
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  href="/about"
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  href="/contact"
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Our Sitemap
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Store Location
                 </Link>
               </li>
@@ -74,42 +80,48 @@ export function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   How to Order
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Buying Policy
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Security Policy
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  href="/privacy"
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  href="/terms"
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Terms & Conditions
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  href="/refund"
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Refund & Return Policy
                 </Link>
               </li>
@@ -125,42 +137,48 @@ export function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Facebook
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   YouTube
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   TikTok
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   LinkedIn
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Instagram
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Threads
                 </Link>
               </li>
@@ -175,43 +193,49 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  href="/bulk"
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Bulk Order
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  href="/business"
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Business With Us
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Be a Wholesaler
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Latest News
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  href="/idea"
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Share Your Idea
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="text-gray-200 hover:text-white text-sm transition-colors">
+                  className="text-gray-200 hover:text-white text-sm transition-colors"
+                >
                   Career
                 </Link>
               </li>

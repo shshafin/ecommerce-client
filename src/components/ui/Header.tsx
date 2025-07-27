@@ -1,5 +1,6 @@
 import { Heart, Search, UserCircle, ShoppingBag } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -65,14 +66,16 @@ export default function Header() {
           </div>
           {/* Right: Icons */}
           <div className="flex items-center gap-5 text-white">
-            <ShoppingBag
+           <Link href={"/cart"}> <ShoppingBag
               className="w-6 h-6 cursor-pointer"
               strokeWidth={2.5}
-            />
+            /></Link>
+           <Link href={"/wishlist"}>
             <Heart
               className="w-6 h-6 cursor-pointer"
               strokeWidth={2.5}
             />
+           </Link>
             <UserCircle
               className="w-6 h-6 cursor-pointer"
               strokeWidth={2.5}
